@@ -56,11 +56,22 @@
                     <!-- card one -->
                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                         <div class="row">
-                            <?php for($i=1; $i<=6; $i++){ ?>
+                            <?php
+$products=[
+["title"=>"p1","price"=> 55,"image"=>"assets/img/categori/product1.png","discount"=>60],
+["title"=>"p2","price"=> 25,"image"=>"assets/img/categori/product2.png"],
+["title"=>"p3","price"=> 55.360,"image"=>"assets/img/categori/product3.png"],
+["title"=>"p4","price"=> 55,"image"=>"assets/img/categori/product4.png"],
+["title"=>"p5","price"=> 555,"image"=>"assets/img/categori/product5.png"],
+["title"=>"p6","price"=> 5558,"image"=>"assets/img/categori/product6.png"],
+
+];
+                            ?>
+                            <?php foreach($products as $p){ ?>
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="single-product mb-60">
                                     <div class="product-img">
-                                        <img src="assets/img/categori/product1.png" alt="">
+                                        <img src="<?php echo $p['image']; ?>" alt="">
                                         <div class="new-product">
                                             <span>New</span>
                                         </div>
@@ -73,11 +84,11 @@
                                             <i class="far fa-star low-star"></i>
                                             <i class="far fa-star low-star"></i>
                                         </div>
-                                        <h4><a href="#">Green Dress with details</a></h4>
+                                        <h4><a href="#"><?php echo $p["title"]; ?></a></h4>
                                         <div class="price">
                                             <ul>
-                                                <li>$40.00</li>
-                                                <li class="discount">$60.00</li>
+                                                <li><?php echo $p["price"]; ?></li>
+                                                <li class="discount"><?php echo $p["discount"]; ?></li>
                                             </ul>
                                         </div>
                                     </div>
