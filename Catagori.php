@@ -59,7 +59,7 @@
                             <?php
 $products=[
 ["title"=>"p1","price"=> 55,"image"=>"assets/img/categori/product1.png","discount"=>60],
-["title"=>"p2","price"=> 25,"image"=>"assets/img/categori/product2.png"],
+["title"=>"p2","price"=> 25,"image"=>"assets/img/categori/product2.png","discount"=>0],
 ["title"=>"p3","price"=> 55.360,"image"=>"assets/img/categori/product3.png"],
 ["title"=>"p4","price"=> 55,"image"=>"assets/img/categori/product4.png"],
 ["title"=>"p5","price"=> 555,"image"=>"assets/img/categori/product5.png"],
@@ -88,7 +88,7 @@ $products=[
                                         <div class="price">
                                             <ul>
                                                 <li><?php echo $p["price"]; ?></li>
-                                                <li class="discount"><?php echo $p["discount"]; ?></li>
+                                                <li class="discount"><?php echo isset($p["discount"]) && $p["discount"] !== 0 ? $p["discount"] : ""; ?></li>
                                             </ul>
                                         </div>
                                     </div>
