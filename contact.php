@@ -52,9 +52,9 @@
                                          type="email" onfocus="this.placeholder = ''" 
                                          onblur="this.placeholder = 'Enter email address'"
                                           placeholder="Email">
-                                          <?php echo isset($_GET["error"])?'<span style="color:red"> Champ obligatoire</span>':'' ;?>
+                                         
 
-                                    </div>
+                                    </div> <?php echo isset($_GET["error"])?'<span style="color:red"> Champ obligatoire</span>':'' ;?>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
